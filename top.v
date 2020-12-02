@@ -455,7 +455,7 @@ module top (
       .RCLKE(1'b1),
       .RCLK(CLK),
       .RE(1'b1),
-      .WCLKE(1'b1),
+      .WCLKE(1'b0),
       .WCLK(CLK),
       .WE(1'b0)
     );
@@ -487,7 +487,7 @@ module top (
       .RCLKE(1'b1),
       .RCLK(CLK),
       .RE(1'b1),
-      .WCLKE(1'b1),
+      .WCLKE(1'b0),
       .WCLK(CLK),
       .WE(1'b0)
     );
@@ -519,7 +519,7 @@ module top (
       .RCLKE(1'b1),
       .RCLK(CLK),
       .RE(1'b1),
-      .WCLKE(1'b1),
+      .WCLKE(1'b0),
       .WCLK(CLK),
       .WE(1'b0)
     );
@@ -551,7 +551,7 @@ module top (
       .RCLKE(1'b1),
       .RCLK(CLK),
       .RE(1'b1),
-      .WCLKE(1'b1),
+      .WCLKE(1'b0),
       .WCLK(CLK),
       .WE(1'b0)
     );
@@ -583,7 +583,7 @@ module top (
       .RCLKE(1'b1),
       .RCLK(CLK),
       .RE(1'b1),
-      .WCLKE(1'b1),
+      .WCLKE(1'b0),
       .WCLK(CLK),
       .WE(1'b0)
     );
@@ -615,7 +615,7 @@ module top (
       .RCLKE(1'b1),
       .RCLK(CLK),
       .RE(1'b1),
-      .WCLKE(1'b1),
+      .WCLKE(1'b0),
       .WCLK(CLK),
       .WE(1'b0)
     );
@@ -647,7 +647,7 @@ module top (
       .RCLKE(1'b1),
       .RCLK(CLK),
       .RE(1'b1),
-      .WCLKE(1'b1),
+      .WCLKE(1'b0),
       .WCLK(CLK),
       .WE(1'b0)
     );
@@ -679,7 +679,7 @@ module top (
       .RCLKE(1'b1),
       .RCLK(CLK),
       .RE(1'b1),
-      .WCLKE(1'b1),
+      .WCLKE(1'b0),
       .WCLK(CLK),
       .WE(1'b0)
     );
@@ -711,7 +711,7 @@ module top (
       .RCLKE(1'b1),
       .RCLK(CLK),
       .RE(1'b1),
-      .WCLKE(1'b1),
+      .WCLKE(1'b0),
       .WCLK(CLK),
       .WE(1'b0)
     );
@@ -743,7 +743,7 @@ module top (
       .RCLKE(1'b1),
       .RCLK(CLK),
       .RE(1'b1),
-      .WCLKE(1'b1),
+      .WCLKE(1'b0),
       .WCLK(CLK),
       .WE(1'b0)
     );
@@ -775,7 +775,7 @@ module top (
       .RCLKE(1'b1),
       .RCLK(CLK),
       .RE(1'b1),
-      .WCLKE(1'b1),
+      .WCLKE(1'b0),
       .WCLK(CLK),
       .WE(1'b0)
     );
@@ -807,7 +807,7 @@ module top (
       .RCLKE(1'b1),
       .RCLK(CLK),
       .RE(1'b1),
-      .WCLKE(1'b1),
+      .WCLKE(1'b0),
       .WCLK(CLK),
       .WE(1'b0)
     );
@@ -839,7 +839,7 @@ module top (
       .RCLKE(1'b1),
       .RCLK(CLK),
       .RE(1'b1),
-      .WCLKE(1'b1),
+      .WCLKE(1'b0),
       .WCLK(CLK),
       .WE(1'b0)
     );
@@ -871,7 +871,7 @@ module top (
       .RCLKE(1'b1),
       .RCLK(CLK),
       .RE(1'b1),
-      .WCLKE(1'b1),
+      .WCLKE(1'b0),
       .WCLK(CLK),
       .WE(1'b0)
     );
@@ -903,7 +903,7 @@ module top (
       .RCLKE(1'b1),
       .RCLK(CLK),
       .RE(1'b1),
-      .WCLKE(1'b1),
+      .WCLKE(1'b0),
       .WCLK(CLK),
       .WE(1'b0)
     );
@@ -935,7 +935,7 @@ module top (
       .RCLKE(1'b1),
       .RCLK(CLK),
       .RE(1'b1),
-      .WCLKE(1'b1),
+      .WCLKE(1'b0),
       .WCLK(CLK),
       .WE(1'b0)
     );
@@ -967,7 +967,7 @@ module top (
       .RCLKE(1'b1),
       .RCLK(CLK),
       .RE(1'b1),
-      .WCLKE(1'b1),
+      .WCLKE(1'b0),
       .WCLK(CLK),
       .WE(1'b0)
     );
@@ -999,7 +999,7 @@ module top (
       .RCLKE(1'b1),
       .RCLK(CLK),
       .RE(1'b1),
-      .WCLKE(1'b1),
+      .WCLKE(1'b0),
       .WCLK(CLK),
       .WE(1'b0)
     );
@@ -1031,7 +1031,7 @@ module top (
       .RCLKE(1'b1),
       .RCLK(CLK),
       .RE(1'b1),
-      .WCLKE(1'b1),
+      .WCLKE(1'b0),
       .WCLK(CLK),
       .WE(1'b0)
     );
@@ -1063,7 +1063,7 @@ module top (
       .RCLKE(1'b1),
       .RCLK(CLK),
       .RE(1'b1),
-      .WCLKE(1'b1),
+      .WCLKE(1'b0),
       .WCLK(CLK),
       .WE(1'b0)
     );
@@ -1095,7 +1095,7 @@ module top (
       .RCLKE(1'b1),
       .RCLK(CLK),
       .RE(1'b1),
-      .WCLKE(1'b1),
+      .WCLKE(1'b0),
       .WCLK(CLK),
       .WE(1'b0)
     );
@@ -1127,7 +1127,7 @@ module top (
       .RCLKE(1'b1),
       .RCLK(CLK),
       .RE(1'b1),
-      .WCLKE(1'b1),
+      .WCLKE(1'b0),
       .WCLK(CLK),
       .WE(1'b0)
     );
@@ -1159,7 +1159,7 @@ module top (
       .RCLKE(1'b1),
       .RCLK(CLK),
       .RE(1'b1),
-      .WCLKE(1'b1),
+      .WCLKE(1'b0),
       .WCLK(CLK),
       .WE(1'b0)
     );
@@ -1191,7 +1191,7 @@ module top (
       .RCLKE(1'b1),
       .RCLK(CLK),
       .RE(1'b1),
-      .WCLKE(1'b1),
+      .WCLKE(1'b0),
       .WCLK(CLK),
       .WE(1'b0)
     );
