@@ -20,7 +20,14 @@ You can optionally use [test_emulator.py](https://github.com/nickbild/fpga_rom_e
 
 ## Media
 
-Coming soon!
+RapidROM:
+![RapidROM](https://raw.githubusercontent.com/nickbild/fpga_rom_emulator/main/media/rapid_rom_sm.jpg)
+
+RapidROM with level shifters:
+![RapidROM w level shifters](https://raw.githubusercontent.com/nickbild/fpga_rom_emulator/main/media/rapid_rom_level_shifters_sm.jpg)
+
+RapidROM attached to [Vectron 65 computer](https://github.com/nickbild/vectron_65):
+![RapidROM w Vectron 65](https://raw.githubusercontent.com/nickbild/fpga_rom_emulator/main/media/rapid_rom_vectron_65_sm.jpg)
 
 ## Bill of Materials
 
