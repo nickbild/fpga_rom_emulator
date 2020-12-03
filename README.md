@@ -14,7 +14,7 @@ When an address is put on the address bus, and the chip enable is low, RapidROM 
 
 ## Loading Simulated ROM Contents
 
-A convenience script ([build.sh](https://github.com/nickbild/fpga_rom_emulator/blob/main/build.sh)) is included that will compile a 6502 assembly file with DASM, then output (via [bytes_list.py](https://github.com/nickbild/fpga_rom_emulator/blob/main/bytes_list.py)) a comma-delimited list of byte values representing the program.  The list of bytes is inserted at the top of [bram_generator.py](https://github.com/nickbild/fpga_rom_emulator/blob/main/bram_generator.py) which outputs BRAM initialization code to store your program in FPGA memory.  Copy and paste this output into [top.v](https://github.com/nickbild/fpga_rom_emulator/blob/main/top.v) after the `// Insert BRAM definitions after this point.` comment line.  Flash the TinyFPGA and the new program is ready to run.
+A convenience script ([build.sh](https://github.com/nickbild/fpga_rom_emulator/blob/main/build.sh)) is included that will compile a 6502 assembly file with DASM, then output (via [bytes_list.py](https://github.com/nickbild/fpga_rom_emulator/blob/main/bytes_list.py)) a comma-delimited list of byte values representing the program.  The list of bytes is inserted at the top of [bram_generator.py](https://github.com/nickbild/fpga_rom_emulator/blob/main/bram_generator.py) which outputs BRAM initialization code to store your program in FPGA memory.  Copy and paste this output into [top.v](https://github.com/nickbild/fpga_rom_emulator/blob/main/top.v) after the `// Insert BRAM definitions after this point.` comment line.  Flash the TinyFPGA with top.v and the new program is ready to run.
 
 ## Media
 
