@@ -147,7 +147,7 @@ module top (
     initial begin
     end
 
-    always @(posedge CLK) begin
+    always @(posedge clk_40mhz) begin
       if (rom_select == 0) begin
             data7 <= memory_data_out_0[14];
             data6 <= memory_data_out_0[12];
@@ -424,6 +424,28 @@ module top (
       end
     end
 
+    // Create a 40MHz clock.
+    wire clk_40mhz;
+    SB_PLL40_CORE #(
+      .DIVR(0),
+      .DIVF(39),
+      .DIVQ(4),
+      .FILTER_RANGE(3'b001),
+      .FEEDBACK_PATH("SIMPLE"),
+      .DELAY_ADJUSTMENT_MODE_FEEDBACK("FIXED"),
+      .FDA_FEEDBACK(4'b0000),
+      .DELAY_ADJUSTMENT_MODE_RELATIVE("FIXED"),
+      .FDA_RELATIVE(4'b0000),
+      .SHIFTREG_DIV_MODE(2'b00),
+      .PLLOUT_SELECT("GENCLK"),
+      .ENABLE_ICEGATE(1'b0)
+    ) pll (
+      .REFERENCECLK(CLK),
+      .PLLOUTCORE(clk_40mhz),
+      .RESETB(1'b1),
+      .BYPASS(1'b0)
+    );
+
     ////
     // Insert BRAM definitions after this point.
     ////
@@ -453,10 +475,10 @@ module top (
       .WADDR(0),
       .WDATA(0),
       .RCLKE(1'b1),
-      .RCLK(CLK),
+      .RCLK(clk_40mhz),
       .RE(1'b1),
       .WCLKE(1'b0),
-      .WCLK(CLK),
+      .WCLK(clk_40mhz),
       .WE(1'b0)
     );
 
@@ -485,10 +507,10 @@ module top (
       .WADDR(0),
       .WDATA(0),
       .RCLKE(1'b1),
-      .RCLK(CLK),
+      .RCLK(clk_40mhz),
       .RE(1'b1),
       .WCLKE(1'b0),
-      .WCLK(CLK),
+      .WCLK(clk_40mhz),
       .WE(1'b0)
     );
 
@@ -517,10 +539,10 @@ module top (
       .WADDR(0),
       .WDATA(0),
       .RCLKE(1'b1),
-      .RCLK(CLK),
+      .RCLK(clk_40mhz),
       .RE(1'b1),
       .WCLKE(1'b0),
-      .WCLK(CLK),
+      .WCLK(clk_40mhz),
       .WE(1'b0)
     );
 
@@ -549,10 +571,10 @@ module top (
       .WADDR(0),
       .WDATA(0),
       .RCLKE(1'b1),
-      .RCLK(CLK),
+      .RCLK(clk_40mhz),
       .RE(1'b1),
       .WCLKE(1'b0),
-      .WCLK(CLK),
+      .WCLK(clk_40mhz),
       .WE(1'b0)
     );
 
@@ -581,10 +603,10 @@ module top (
       .WADDR(0),
       .WDATA(0),
       .RCLKE(1'b1),
-      .RCLK(CLK),
+      .RCLK(clk_40mhz),
       .RE(1'b1),
       .WCLKE(1'b0),
-      .WCLK(CLK),
+      .WCLK(clk_40mhz),
       .WE(1'b0)
     );
 
@@ -613,10 +635,10 @@ module top (
       .WADDR(0),
       .WDATA(0),
       .RCLKE(1'b1),
-      .RCLK(CLK),
+      .RCLK(clk_40mhz),
       .RE(1'b1),
       .WCLKE(1'b0),
-      .WCLK(CLK),
+      .WCLK(clk_40mhz),
       .WE(1'b0)
     );
 
@@ -645,10 +667,10 @@ module top (
       .WADDR(0),
       .WDATA(0),
       .RCLKE(1'b1),
-      .RCLK(CLK),
+      .RCLK(clk_40mhz),
       .RE(1'b1),
       .WCLKE(1'b0),
-      .WCLK(CLK),
+      .WCLK(clk_40mhz),
       .WE(1'b0)
     );
 
@@ -677,10 +699,10 @@ module top (
       .WADDR(0),
       .WDATA(0),
       .RCLKE(1'b1),
-      .RCLK(CLK),
+      .RCLK(clk_40mhz),
       .RE(1'b1),
       .WCLKE(1'b0),
-      .WCLK(CLK),
+      .WCLK(clk_40mhz),
       .WE(1'b0)
     );
 
@@ -709,10 +731,10 @@ module top (
       .WADDR(0),
       .WDATA(0),
       .RCLKE(1'b1),
-      .RCLK(CLK),
+      .RCLK(clk_40mhz),
       .RE(1'b1),
       .WCLKE(1'b0),
-      .WCLK(CLK),
+      .WCLK(clk_40mhz),
       .WE(1'b0)
     );
 
@@ -741,10 +763,10 @@ module top (
       .WADDR(0),
       .WDATA(0),
       .RCLKE(1'b1),
-      .RCLK(CLK),
+      .RCLK(clk_40mhz),
       .RE(1'b1),
       .WCLKE(1'b0),
-      .WCLK(CLK),
+      .WCLK(clk_40mhz),
       .WE(1'b0)
     );
 
@@ -773,10 +795,10 @@ module top (
       .WADDR(0),
       .WDATA(0),
       .RCLKE(1'b1),
-      .RCLK(CLK),
+      .RCLK(clk_40mhz),
       .RE(1'b1),
       .WCLKE(1'b0),
-      .WCLK(CLK),
+      .WCLK(clk_40mhz),
       .WE(1'b0)
     );
 
@@ -805,10 +827,10 @@ module top (
       .WADDR(0),
       .WDATA(0),
       .RCLKE(1'b1),
-      .RCLK(CLK),
+      .RCLK(clk_40mhz),
       .RE(1'b1),
       .WCLKE(1'b0),
-      .WCLK(CLK),
+      .WCLK(clk_40mhz),
       .WE(1'b0)
     );
 
@@ -837,10 +859,10 @@ module top (
       .WADDR(0),
       .WDATA(0),
       .RCLKE(1'b1),
-      .RCLK(CLK),
+      .RCLK(clk_40mhz),
       .RE(1'b1),
       .WCLKE(1'b0),
-      .WCLK(CLK),
+      .WCLK(clk_40mhz),
       .WE(1'b0)
     );
 
@@ -869,10 +891,10 @@ module top (
       .WADDR(0),
       .WDATA(0),
       .RCLKE(1'b1),
-      .RCLK(CLK),
+      .RCLK(clk_40mhz),
       .RE(1'b1),
       .WCLKE(1'b0),
-      .WCLK(CLK),
+      .WCLK(clk_40mhz),
       .WE(1'b0)
     );
 
@@ -901,10 +923,10 @@ module top (
       .WADDR(0),
       .WDATA(0),
       .RCLKE(1'b1),
-      .RCLK(CLK),
+      .RCLK(clk_40mhz),
       .RE(1'b1),
       .WCLKE(1'b0),
-      .WCLK(CLK),
+      .WCLK(clk_40mhz),
       .WE(1'b0)
     );
 
@@ -933,10 +955,10 @@ module top (
       .WADDR(0),
       .WDATA(0),
       .RCLKE(1'b1),
-      .RCLK(CLK),
+      .RCLK(clk_40mhz),
       .RE(1'b1),
       .WCLKE(1'b0),
-      .WCLK(CLK),
+      .WCLK(clk_40mhz),
       .WE(1'b0)
     );
 
@@ -965,10 +987,10 @@ module top (
       .WADDR(0),
       .WDATA(0),
       .RCLKE(1'b1),
-      .RCLK(CLK),
+      .RCLK(clk_40mhz),
       .RE(1'b1),
       .WCLKE(1'b0),
-      .WCLK(CLK),
+      .WCLK(clk_40mhz),
       .WE(1'b0)
     );
 
@@ -997,10 +1019,10 @@ module top (
       .WADDR(0),
       .WDATA(0),
       .RCLKE(1'b1),
-      .RCLK(CLK),
+      .RCLK(clk_40mhz),
       .RE(1'b1),
       .WCLKE(1'b0),
-      .WCLK(CLK),
+      .WCLK(clk_40mhz),
       .WE(1'b0)
     );
 
@@ -1029,10 +1051,10 @@ module top (
       .WADDR(0),
       .WDATA(0),
       .RCLKE(1'b1),
-      .RCLK(CLK),
+      .RCLK(clk_40mhz),
       .RE(1'b1),
       .WCLKE(1'b0),
-      .WCLK(CLK),
+      .WCLK(clk_40mhz),
       .WE(1'b0)
     );
 
@@ -1061,10 +1083,10 @@ module top (
       .WADDR(0),
       .WDATA(0),
       .RCLKE(1'b1),
-      .RCLK(CLK),
+      .RCLK(clk_40mhz),
       .RE(1'b1),
       .WCLKE(1'b0),
-      .WCLK(CLK),
+      .WCLK(clk_40mhz),
       .WE(1'b0)
     );
 
@@ -1093,10 +1115,10 @@ module top (
       .WADDR(0),
       .WDATA(0),
       .RCLKE(1'b1),
-      .RCLK(CLK),
+      .RCLK(clk_40mhz),
       .RE(1'b1),
       .WCLKE(1'b0),
-      .WCLK(CLK),
+      .WCLK(clk_40mhz),
       .WE(1'b0)
     );
 
@@ -1125,10 +1147,10 @@ module top (
       .WADDR(0),
       .WDATA(0),
       .RCLKE(1'b1),
-      .RCLK(CLK),
+      .RCLK(clk_40mhz),
       .RE(1'b1),
       .WCLKE(1'b0),
-      .WCLK(CLK),
+      .WCLK(clk_40mhz),
       .WE(1'b0)
     );
 
@@ -1157,10 +1179,10 @@ module top (
       .WADDR(0),
       .WDATA(0),
       .RCLKE(1'b1),
-      .RCLK(CLK),
+      .RCLK(clk_40mhz),
       .RE(1'b1),
       .WCLKE(1'b0),
-      .WCLK(CLK),
+      .WCLK(clk_40mhz),
       .WE(1'b0)
     );
 
@@ -1189,10 +1211,10 @@ module top (
       .WADDR(0),
       .WDATA(0),
       .RCLKE(1'b1),
-      .RCLK(CLK),
+      .RCLK(clk_40mhz),
       .RE(1'b1),
       .WCLKE(1'b0),
-      .WCLK(CLK),
+      .WCLK(clk_40mhz),
       .WE(1'b0)
     );
 
